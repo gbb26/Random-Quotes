@@ -1,43 +1,49 @@
 body {
   margin: 0;
   background-color: #807a7a;
-  display:flex;
+  display: flex;
   justify-content: space-around;
   align-items: center;
   height: 100vh;
   width: 100vw;
   background-image: url('./background-image.jpg');
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   background-size: cover;
 
 }
-#quote-box:hover{
-  transform: scale(1.1,1.1);
+
+#quote-box:hover {
+  transform: scale(1.1, 1.1);
   transition: all 0.4s ease-in;
 }
-.content{
+
+.content {
   margin-left: 6px;
   margin-right: 6px;
 }
-.quote{
+
+.quote {
   padding: 30px 10px 10px 0;
   font-size: 1.2em;
   font-style: italic;
   text-align: center;
 }
-.author{
+
+.author {
   margin-right: 3px;
   font-weight: 700;
   font-size: 1.3em;
   text-align: right;
   padding: 5px;
 }
+
 #quote-box {
   border-radius: 10px;
   background-color: #faebd7;
   height: auto;
   width: 600px;
 }
+
 .btn {
   margin-bottom: 10px;
   margin-top: 0px;
@@ -50,26 +56,26 @@ body {
   text-transform: uppercase;
   font-size: 15px;
   transition: all .5s ease;
- }
- 
- .btn:hover {
+}
+
+.btn:hover {
   letter-spacing: 3px;
-  background-color:  #807a7a;
+  background-color: #807a7a;
   color: hsl(0, 0%, 100%);
-  box-shadow:  #807a7a 0px 7px 29px 0px;
- }
- 
- .btn:active {
+  box-shadow: #807a7a 0px 7px 29px 0px;
+}
+
+.btn:active {
   letter-spacing: 3px;
   background-color: hsl(261deg 80% 48%);
   color: hsl(0, 0%, 100%);
   box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
   transform: translateY(10px);
   transition: 100ms;
- }
+}
 
 @media screen and (max-width:768px) {
-  #quote-box{
+  #quote-box {
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
