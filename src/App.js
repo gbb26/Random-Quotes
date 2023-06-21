@@ -1,23 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import "./App.css";
 
 function App() {
+  const [content, setContent] = useState({
+    text: "",
+    author: "",
+  });
+  const getData = async () => {
+    const url = "https://quotes15.p.rapidapi.com/quotes/random/";
+    const options = {
+      method: "GET",
+      headers: {
+        "X-RapidAPI-Key": process.env.REACT_APP_API_KEY,
+        "X-RapidAPI-Host": "quotes15.p.rapidapi.com",
+      },
+    };
+
+    try {
+      const response = await fetch(url, options);
+      const result = await response.json();
+      setContent({
+        text: result.content,
+        author: result.originator.name,
+      });
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  useEffect(() => {
+    getData();
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="quote-box">
+      <div className="content">
+        <p className="quote">{content.text}</p>
+        <p className="author"> - {content.author}</p>
+      </div>
+      <center>
+        <button onClick={getData} className="btn">
+          Quote
+        </button>
+      </center>
     </div>
   );
 }
