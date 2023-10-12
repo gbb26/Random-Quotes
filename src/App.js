@@ -11,7 +11,7 @@ function App() {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": process.env.REACT_APP_API_KEY,
+        "X-RapidAPI-Key": "",
         "X-RapidAPI-Host": "quotes15.p.rapidapi.com",
       },
     };
@@ -38,7 +38,7 @@ function App() {
       </div>
       <center>
         <button onClick={getData} className="btn">
-          Quote
+          Load Another Quote
         </button>
       </center>
     </div>
