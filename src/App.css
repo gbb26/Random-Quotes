@@ -12,11 +12,6 @@ body {
 
 }
 
-#quote-box:hover {
-  transform: scale(1.1, 1.1);
-  transition: transform 1s ease-in-out;
-}
-
 .content {
   margin-left: 6px;
   margin-right: 6px;
@@ -43,7 +38,11 @@ body {
   width: 600px;
   color: #fff;
   background: linear-gradient(45deg, transparent, rgb(101, 101, 70), rgb(99, 80, 8));
+  transition: all 1s;
   font-size: 18px;
+}
+#quote-box:hover{
+  background: linear-gradient(50deg, transparent, rgb(95, 95, 67), rgb(88, 70, 7));
 }
 .btn {
   margin-bottom: 10px;
@@ -70,9 +69,9 @@ body {
 
 .btn:active {
   letter-spacing: 3px;
-  background-color: hsl(261deg 80% 48%);
+  background: linear-gradient(45deg, transparent, rgb(101, 101, 70), rgb(99, 80, 8));
   color: hsl(0, 0%, 100%);
-  box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+  box-shadow: #000030 0px 7px 29px 0px;
   transform: translateY(10px);
   transition: 100ms;
 }

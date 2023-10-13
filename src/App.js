@@ -11,7 +11,7 @@ function App() {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "",
+        "X-RapidAPI-Key": "267604c5d4mshbb0f82c9db7bf45p157ea4jsnc27e9ce7152e",
         "X-RapidAPI-Host": "quotes15.p.rapidapi.com",
       },
     };
